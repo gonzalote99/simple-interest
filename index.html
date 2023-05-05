@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+  <title>Simple interest</title>
+</head>
+<body>
+  <div class="maindiv">
+   <h1>simple interest calculator</h1>
+   <form action="" id="mainform">
+    <p><label>amount</label><input type="number" id="principal"></p>
+    <p><label>interest rate</label><input type="range" id="rate" min="1" max="20" step="0.25" value="10.25" onchange="showRange();"><span id="ratevalue" >10.25%</p>
+      <p><label>no years</label><select name="years" id="years">
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="7">7</option>
+         <option value="8">8</option>
+         <option value="9">9</option>
+         <option value="10">10</option>
+
+        </select>
+      </p>
+      <p><button onclick="compute(); return false" >compute interest</button></p>
+
+   </form>
+   <span id="result" class="result">
+     deposit: <mark><label id="depositmessage"></label></mark><br/>
+     interesrt rate: <mark><label id="interestmessage"></label></mark><br />
+    recibe amount: <mark><label id="amountmessage"></label></mark><br />
+    in year: <mark><label id="yearmessage"></label></mark>
+
+   </span>
+   <footer>&#169 current year</footer>
+  </div>
+</body>
+</html>
